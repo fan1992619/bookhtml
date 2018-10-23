@@ -1,0 +1,11 @@
+@charset "utf-8";
+.mr-content{
+	width:790px;
+	height:340px;
+	margin:0 auto;
+	background:url(../images/6-4.jpg) no-repeat;
+	border:2px solid red;	
+	}
+audio{
+	margin:10px 0 0 390px;
+	}

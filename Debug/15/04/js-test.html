@@ -1,0 +1,105 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <title>js-test.html</title>
+  <script type="text/javascript">
+    
+function elemById(id) {
+      
+return document.getElementById(id);
+    }
+
+    
+function getBrowserAgent() {
+      var browser = "$";
+      if ((navigator.userAgent.indexOf('MSIE') >= 0) &&
+          (navigator.userAgent.indexOf('Opera') < 0)){
+        browser = "$IE";
+      }
+      else if (navigator.userAgent.indexOf('Firefox') >= 0){
+        browser = "$FIREFOX";
+      }
+      else if (navigator.userAgent.indexOf('Opera') >= 0){
+        browser = "$OPERA";
+      }
+      else if (navigator.userAgent.indexOf('Chrome') >= 0){
+        browser = "$CHROME";
+      }
+      return browser;
+    }
+
+    var browser = getBrowserAgent();
+
+    window.addEventListener('load', 
+      function () {
+        if (browser=="$IE") {
+          // MSIE
+          if (window.confirm("IE does not support HTML5 currently.\n"+
+              "please use lastest FireFox, Chrome or Opera!\n"+
+              "if you havenot any of them installed,\n"+
+              "please click OK to enter download page.")) {
+            window.location.replace("selbrowser.html");
+          }
+          else {
+            window.close();
+          }
+        }
+        else if (browser=="$FIREFOX"||browser=="$CHROME") {
+          // do stuff for FireFox and Chrome
+        }
+        else {
+          // do stuff for others
+        }
+        
+        initPage();
+      },
+      false
+    );
+
+	var dt = new Date();
+	var t0 = 0;
+
+    function initPage () {
+      // onclick
+      elemById("_piWorker").addEventListener('click',
+        function(){
+          var worker = new Worker("worker.js");
+          worker.onmessage = function (event) {
+            // update UI here
+			var t1 = new Date().getTime();
+			elemById("_time").value = t1 - t0;
+            elemById("_piValue").value = event.data;
+          };
+
+          worker.onerror = function (event) {  
+            alert(event.message);  
+          };  
+
+		  elemById("_time").value = "-";
+		  t0 = new Date().getTime();
+          worker.postMessage(parseInt(elemById("_num_rects").value));
+        },
+        false
+      );
+    }
+  </script>
+  </head>
+  <body>
+  
+  <p>这个例子是用数值积分的方法求pi=(3.1415926....）的。worker.js就是做这个工作。</p>
+  <p></p>
+<p>点击按钮"calc" 求取pi值</p>
+
+<p>
+    <input type="input" size="10" id="_num_rects" value="100000000">
+    <input type="button" id="_piWorker" value="calc">
+    pi=
+    <input type="input" size="30" id="_piValue" value="">
+   耗时（ time elapsed:）
+    <input type="input" size="10" id="_time" value="-">
+  </p>
+
+</body>
+</html>

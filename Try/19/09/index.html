@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>转换表格中的列</title>
+
+    <style>
+        @media only screen and (max-width: 800px) {
+            /* 强制表格为块状布局 */
+             table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            /* 隐藏表格头部信息 */
+             thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+             tr { border: 1px solid #ccc; }
+             td {
+                /* 显示列 */
+                border: none;
+                border-bottom: 1px solid #eee;
+                position: relative;
+                padding-left: 50%;
+                white-space: normal;
+                text-align:left;
+            }
+             td:before {
+                position: absolute;
+                top: 6px;
+                left: 6px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                text-align:left;
+                font-weight: bold;
+            }
+            /*显示数据*/
+             td:before { content: attr(data-title); }
+        }
+    </style>
+</head>
+<body style="background-image: url(bg.jpg);color:#fff">
+<h1 align="center">招聘信息</h1>
+<table width="100%" cellspacing="1" cellpadding="5" border="1">
+    <thead>
+    <tr>
+        <th>年份</th>
+        <th>数学</th>
+        <th>语文</th>
+        <th>英语</th>
+        <th>化学</th>
+        <th>物理</th>
+        <th>美术</th>
+    </tr>
+    </thead>
+    <tbody align="center">
+    <tr>
+        <td>2017年</td>
+        <td>85</td>
+        <td>90</td>
+        <td>75</td>
+        <td>68</td>
+        <td>66</td>
+        <td>87</td>
+    </tr>
+    <tr>
+        <td>2016年</td>
+        <td>78</td>
+        <td>96</td>
+        <td>78</td>
+        <td>68</td>
+        <td>78</td>
+        <td>85</td>
+    </tr>
+	<tr>
+        <td>2015年</td>
+        <td>96</td>
+        <td>86</td>
+        <td>93</td>
+        <td>71</td>
+        <td>82</td>
+        <td>93</td>
+    </tr>
+	<tr>
+        <td>2014年</td>
+        <td>74</td>
+        <td>85</td>
+        <td>68</td>
+        <td>63</td>
+        <td>66</td>
+        <td>96</td>
+    </tr>
+	<tr>
+        <td>2013年</td>
+        <td>85</td>
+        <td>90</td>
+        <td>75</td>
+        <td>68</td>
+        <td>66</td>
+        <td>87</td>
+    </tr>
+	<tr>
+        <td>2012年</td>
+        <td>89</td>
+        <td>74</td>
+        <td>85</td>
+        <td>92</td>
+        <td>82</td>
+        <td>74</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

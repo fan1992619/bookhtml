@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+.mr-cont{
+	width: 800px;
+	margin: 0 auto;
+	position: relative;
+	border: 1px solid #f00;
+	background: url(../img/back1.jpg) repeat-x;
+}
+
+[type="button"]{
+	height: 30px;
+	width: 50px;
+	margin-left: 300px;
+	border-radius: 15px;
+	border: none;
+	position: absolute;
+	top:450px;
+	background: rgb(128,188,240);
+}
+.fly{
+	left: 150px;
+}

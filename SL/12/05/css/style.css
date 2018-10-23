@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+.mr-cont {
+	width: 800px;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	border: 1px solid #f00;
+}
+canvas {
+	background: url(../img/bg.jpg);
+}
+input{
+	position: absolute;
+	height: 30px;
+	width: 60px;
+	top:560px;
+	font-size:18px;
+	background: rgba(61,232,229,1.00);
+	border: 1px solid rgba(61,232,229,1.00);
+	border-radius: 5px;
+}

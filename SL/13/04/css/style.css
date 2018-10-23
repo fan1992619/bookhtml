@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+.mr-cont{
+	width: 800px;
+	margin: 0 auto;
+	background: url(../img/bg.jpg);
+	border: 1px solid #f00;
+}
+label{
+	margin-top: 30px;
+	display: block;
+}
+label input{
+	width: 730px;
+}
+.btn{
+	margin:5px 60px;
+	position: relative;
+	
+}
+[type="file"]{
+	position: absolute;
+	left: 50px;
+	opacity: 0;
+	width: 66px;
+}
+[type="button"]{
+	margin-left: 50px;
+	background: rgba(255,255,255,0);
+	border: #eff5fb;
+	text-decoration: underline;
+	color: rgba(17,170,244,1.00);
+}
+.readd span{
+	vertical-align: top;
+}
+#result{
+	height: 150px;
+	width: 710px;
+	border: 1px solid #000;
+	margin-bottom: 20px;
+	font-size: 18px;
+}

@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+.mr-can {
+	margin: 0 auto;
+	width: 1000px;
+	height: 750px;
+	border: 1px solid #f00;
+}
+#cav {
+	background: url(../images/bg2.jpg);
+}
+#pic {
+	display: none;
+}

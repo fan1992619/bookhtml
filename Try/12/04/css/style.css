@@ -1,0 +1,8 @@
+@charset "utf-8";
+/* CSS Document */
+.mr-cont{
+	height: 400px;
+	width: 422px;
+	margin: 0 auto;
+	border: 1px solid #f00;
+}

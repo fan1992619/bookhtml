@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+</head>
+<body>
+<video id="video">
+ <source  src="butterfly.mp4" type="video/mp4" />
+ <source  src="butterfly.webm" type="video/webm" />
+
+</video>
+
+<!--播放按钮和播放时间-->
+<button id="playButton"  onclick="playOrPauseVideo()">播放</button>
+<span id="time"></span>
+</body>
+<script>
+	//显示时间进度
+ function playOrPauseVideo() {
+     var video = document.getElementById("video");
+     //使用事件监听方式捕捉事件
+     video.addEventListener("timeupdate", function () {
+         var timeDisplay = document.getElementById("time");
+         //用秒数来显示当前播放进度
+         timeDisplay.innerHTML = Math.floor(video.currentTime) + "／" + Math.floor(video.duration) + "（秒）";
+     }, false);
+
+				
+
+                
+   //播放暂停
+  var play=document.getElementById("playButton");//获取按钮元素
+    play.onclick = function () {
+       if (video.ended) {                      //如果媒体播放结束，播放时间从0开始
+           video.currentTime = 0;
+       }
+       video[video.paused ? 'play' : 'pause']();  //通过三元运算执行播放和暂停
+   };
+            
+    video.addEventListener('play', playEvent, false);	//使用事件播放
+				video.addEventListener('pause', pausedEvent, false);	//播放暂停
+				video.addEventListener('ended', function () {	//播放结束后停止播放
+				  this.pause();	//显示暂停播放
+				}, false);
+
+  
+  function playEvent() {
+   video.play();
+   play.innerHTML = '暂停';
+}
+function pausedEvent() {
+ video.pause();
+  play.innerHTML = '播放';
+}
+  
+  
+  
+
+ }
+
+
+
+
+</script>
+</html>

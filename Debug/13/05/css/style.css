@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	text-align: center;
+}
+h1{
+	width: 200px;
+	margin:  0 auto;
+}
+#pic{
+	width: 250px;
+}
+.set{
+	width: 250px;
+	border: 1px dotted red;
+	margin: 30px auto 0;
+	text-align: center;
+}
+.set label{
+	display: block;
+	margin-top: 20px;
+}
+[type="button"]{
+	margin-top: 20px;
+}

@@ -1,0 +1,13 @@
+﻿#mr-event {
+    height: 300px;
+    width: 590px;
+    margin:0 auto;
+    border: #999 solid 1px;
+    font-size: 20px;
+    font-weight: 900;
+    padding-left: 50px;
+}
+#num {
+    margin-top: 119px;
+    margin-left: 515px;
+}

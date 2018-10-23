@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+.mr-cont {
+	width: 800px;
+	height: 600px;
+	text-align: center;
+	margin: 0 auto;
+	background: url(../img/bg.jpg);
+}
+h2 {
+	padding-top: 100px;
+}
+.mr-head {
+	height: 462px;
+	width: 554px;
+	margin-left: 130px;
+}
+input {
+	margin-top: 40px;
+}
+[type="file"] {
+	width: 68px;
+}

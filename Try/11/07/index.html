@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>007</title>
+    <link rel="stylesheet" type="text/css" href="css/mr-style.css">
+</head>
+<body>
+<script>
+    //使用document对象，在<body>标签中插入<table>标签
+    document.write("<table>");
+    var str = "JavaScript实现的九九乘法表";
+    document.write("<h1>" + str + "</h1>");
+    //循环控制语句
+    for ( var x = 1; x <= 9; x++) {
+        //使用document对象，在<table>标签中插入<tr>标签
+        document.write("<tr>");
+        //嵌套循环
+        for ( var y = 1; y <= x; y++) {
+            //使用document对象，在<tr>标签中插入<td>标签
+            document.write("<th>" + x + "*" + y + "=" + (x * y) + "</th>");
+        }
+        document.write("</tr>");
+    }
+    document.write("</table>");
+</script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0 ,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>010</title>
+    <link rel="stylesheet" href="css/mr-basic.css"/>
+    <link href="css/mr-demo.css" rel="stylesheet" type="text/css" />
+    <link href="css/mr-cartstyle.css" rel="stylesheet" type="text/css" />
+    <link href="css/mr-jsstyle.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+<div class="clear"></div>
+<div class="concent">
+<!--地址 -->
+<div class="paycont">
+<div class="address">
+    <h3>确认收货地址 </h3>
+
+    <div class="control">
+        <div class="tc-btn createAddr theme-login mr-btn mr-btn-danger" onclick="copyAddress()">复制地址</div>
+
+    </div>
+    <div class="clear"></div>
+    <ul id="addressContainer">
+
+        <li id="address" class="user-addresslist defaultAddr">
+
+            <div class="address-left">
+                <div class="user DefaultAddr">
+
+					<span class="buy-address-detail">
+                   <span class="buy-user">李丹  </span>
+										<span class="buy-phone">15871145629</span>
+										</span>
+                </div>
+                <div class="default-address DefaultAddr">
+                    <span class="buy-line-title buy-line-title-type">收货地址：</span>
+										<span class="buy--address-detail">
+								   <span class="province">吉林</span>省
+										<span class="city">长春</span>市
+										<span class="dist">南关区</span>区
+										<span class="street">卫星广场财富领域5A16室</span>
+										</span>
+
+                    </span>
+                </div>
+                <ins class="deftip">默认地址</ins>
+            </div>
+            <div class="address-right">
+                <a href="../person/address.html">
+                    <span class="mr-icon-angle-right mr-icon-lg"></span></a>
+            </div>
+            <div class="clear"></div>
+
+            <div class="new-addr-btn">
+                <a href="#" class="hidden">设为默认</a>
+                <span class="new-addr-bar hidden">|</span>
+
+                <a href="javascript:void(0);" onclick="delClick(this);">删除</a>
+            </div>
+        </li>
+
+    </ul>
+
+    <script>
+        //复制收货地址
+        function copyAddress(){
+            var address = document.getElementById("address");      //获得收货地址对象
+            var addressCopy = address.cloneNode(true);              //完全复制对象
+
+            var addressContainer = document.getElementById("addressContainer");
+            addressContainer.appendChild(addressCopy);              //父容器添加复制对象
+        }
+
+        //删除收货地址
+        function delClick(obj){
+            var addressContainer = document.getElementById("addressContainer");
+            var delObj=obj.parentNode.parentNode;                  //获取父容器节点
+            if(delObj.previousElementSibling===null){            //判断根节点
+                alert('无法删除！至少保留一个默认地址！');
+                return;
+            }
+            addressContainer.removeChild(delObj);                   //删除节点对象
+        }
+    </script>
+
+    <div class="clear"></div>
+</div>
+<!--物流 -->
+<div class="logistics">
+    <h3>选择物流方式</h3>
+    <ul class="op_express_delivery_hot">
+        <li data-value="yuantong" class="OP_LOG_BTN  "><i class="c-gap-right"
+                                                          style="background-position:0px -468px"></i>圆通<span></span>
+        </li>
+        <li data-value="shentong" class="OP_LOG_BTN  "><i class="c-gap-right"
+                                                          style="background-position:0px -1008px"></i>申通<span></span>
+        </li>
+        <li data-value="yunda" class="OP_LOG_BTN  "><i class="c-gap-right" style="background-position:0px -576px"></i>韵达<span></span>
+        </li>
+        <li data-value="zhongtong" class="OP_LOG_BTN op_express_delivery_hot_last "><i class="c-gap-right"
+                                                                                       style="background-position:0px -324px"></i>中通<span></span>
+        </li>
+        <li data-value="shunfeng" class="OP_LOG_BTN  op_express_delivery_hot_bottom"><i class="c-gap-right"
+                                                                                        style="background-position:0px -180px"></i>顺丰<span></span>
+        </li>
+    </ul>
+</div>
+<div class="clear"></div>
+
+<!--支付方式-->
+<div class="logistics">
+    <h3>选择支付方式</h3>
+    <ul class="pay-list">
+        <li class="pay card"><img src="images/wangyin.jpg"/>银联<span></span></li>
+        <li class="pay qq"><img src="images/weizhifu.jpg"/>微信<span></span></li>
+        <li class="pay taobao"><img src="images/zhifubao.jpg"/>支付宝<span></span></li>
+    </ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+
+</html>

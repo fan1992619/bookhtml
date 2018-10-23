@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+ <head>
+ <meta charset="UTF-8">
+ <title>使用HTML5本地数据库DEMO</title>
+
+ </head>
+ <body>
+<h1 align="center">学生信息注册</h1>
+ <table align="center">
+     <tr>
+     	<td>姓名：</td><td><input type="text" id="name"></td>
+     	<td>学号：</td><td><input type="text" id="num"></td>
+     </tr>
+     <tr>
+     	<td>院系：</td><td><input type="text" id="acade"></td>
+     	<td>班级：</td><td><input type="text" id="clas"></td>
+     </tr>
+     <tr>
+         <td align="center"><input type="button" value="保存" onclick="saveData();"></td>
+         <td align="center">
+         	<input type="search" id="sea" placeholder="请输入学号进行查询">
+         	<input type="button" value="查询" onclick="showAllData()">
+         </td>
+   </tr>
+ </table>
+ <hr>
+ <table id="datatable" border="1" align="center"></table>
+ </body>
+ </html>
+  <script type="text/javascript" src="js/js.js">
+  
+ 
+  </script>

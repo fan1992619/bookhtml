@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+.mr-con{
+	width: 1000px;
+	height: 547px;
+	margin: 20px auto;
+	position: relative;
+	border: 1px solid #f00;
+	background:url(../img/bg.jpg);
+}
+[type="button"]{
+	position: absolute;
+	top:460px;
+	left: 475px;
+	font-size: 20px;
+	font-weight: bolder;
+	height: 40px;
+	width: 90px;
+	color: #fff;
+	background: rgb(254,207,67);
+	border: 1px solid rgb(254,207,67);
+}

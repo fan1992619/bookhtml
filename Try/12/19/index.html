@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link href="css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="mr-cont">
+  <canvas id="cav" height="600" width="800"></canvas>
+  <div class="sel sel1"> 
+    <span>textAlign:</span>
+    <select id="textAlign" onChange="show1()">
+      <option value="start">start</option>
+      <option value="left">left</option>
+      <option value="center">center</option>
+      <option value="right">right</option>
+      <option value="end">end</option>
+    </select>
+  </div>
+  <div class="sel sel2">
+    <span>textBaseline:</span>
+    <select id="textBaseline" onChange="show1()">
+      <option value="top">top</option>
+      <option value="hanging">hanging</option>
+      <option value="middle">middle</option>
+      <option value="alphabetic">alphabetic</option>
+      <option value="ideographic">ideographic</option>
+      <option value="bottom">bottom</option>
+    </select>
+  </div>
+</div>
+</body>
+<script src="js/js.js"></script>
+</html>

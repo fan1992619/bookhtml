@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>013</title>
+    <link type="text/css" rel="stylesheet" href="css/mr-style.css">
+</head>
+<body>
+<div class="cont">
+    <input id="mr-show"><br>
+    <span>按下Enter键开始，任意键结束</span>
+</div>
+</body>
+<script>
+    //随机显示手机号码
+	function showTel(){
+	    phoneNum1=document.getElementById('mr-show');
+	    var num1=[3,5,4,8];
+	    var temp=(Math.round(Math.random()*3));
+	    var temp1=(Math.round(Math.random()*1000000000));
+	    phoneNum1.value='1'+num1[temp]+temp1;
+	}
+	//按下键盘
+	window.onkeydown=function(){
+		if(event.keyCode==13)           //单击键盘<Enter>键时
+		    start();                     //调用start()方法
+		if((event.keyCode!=13))         //单击键盘任意键时，<Enter>键除外
+		    stop();                      //调用stop()方法
+    }
+    //键盘事件停止
+	function stop(){
+		 clearInterval(rand1)	
+	}
+    //键盘事件启动
+	function start(){
+		 rand1=setInterval(showTel,1)
+	}
+</script>
+</html>

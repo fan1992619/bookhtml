@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	margin: 0;
+}
+.mr-cont {
+	height: 700px;
+	width: 670px;
+	margin: 0 auto;
+	background: url(../img/back3.jpg);
+}
+.mr-cont>:first-child+div {
+	height: 152px;
+	border-top: 1px solid #000;
+}
+.mr-cont>:last-child {
+	height: 180px;
+	border: none;
+}
+.mr-cont>div {
+	width: 610px;
+	border: 1px solid #000;
+	border-top: none;
+	margin-left: 30px;
+}
+
+h2 {
+	padding: 40px 0 10px 260px;
+}
+p {
+	margin-left: 30px;
+	float: left;
+	height: 50px;
+	border-right: 1px solid #000;
+}
+.mess, .photo {
+	float: left;
+}
+.photo {
+	line-height: 152px;
+	width: 110px;
+	height: 152px;
+}
+p span, p input {
+	float: left;
+	display: block;
+}
+p span {
+	width: 50px;
+	height: 30px;
+	padding-top: 20px;
+}
+p input {
+	width: 125px;
+	margin: 20px 20px 0 20px;
+}
+.mess>div {
+	height: 50px;
+	width: 500px;
+	border-top: 1px solid #000;
+	margin: 0;
+}
+.mess>:first-child {
+	border-top: none;
+}
+.expr h3 {
+	line-height: 30px;
+	padding-left: 30px;
+	height: 30px;
+	border-bottom: 1px solid #000;
+}
+.expr>div{
+	height: 170px;
+}
+.btn{
+	position: relative;
+	margin-top: 15px;
+}
+[type="file"]{
+	position: absolute;
+	width: 67px;
+	left: 150px;
+	opacity: 0;
+}
+[type="button"]{
+	margin-left: 150px;
+}
+img{
+	width: 110px;
+	height: 152px;
+}
+textarea{
+	border: none;
+	background:rgba(255,255,255,0.1);
+}
+

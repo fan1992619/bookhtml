@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>绘制图像的使用</title>
+    <meta name="viewport" content="width=device-width">
+    <link type="text/css" rel="stylesheet" href="common/mr-common.css">
+    <script src="common/mr-common.js"></script>
+	 <!-- 本案例CSS文件-->
+	 <link type="text/css" rel="stylesheet" href="css/mr-style.css">
+     <script src="js/mr-js.js"></script>
+</head>
+<body>
+
+<ui-view>
+    <div id="codeArea" class="container containerHome">
+        <div class="icons">
+            <section>
+                <h1>canvas画布中将图像变形并组成半圆形</h1>
+
+                <p class="mr-code-info">
+                    在利用canvas绘制图像时，通常需要先引入图片，然后在画布中绘制图像。
+                    图像的变形通常包括缩放，平移以及旋转。
+                </p>
+            </section>
+
+            <section>
+                <hr/>
+                <div>效果<a class="mr-code-link" href="javascript:showCode();">源码</a></div>
+            </section>
+
+            <section class="mr-code-show">
+<div class="mr-can">
+  <canvas id="cav" width="1000" height="750"></canvas>
+  <img src="images/phone.png" alt="" id="pic"></div>
+
+            </section>
+
+            <footer class="mr-footer">
+                <hr/>
+                <p>技术支持： <a href="http://www.mingrisoft.com/" target="_blank">明日科技</a></p>
+            </footer>
+
+        </div>
+
+
+        <!-- 源码区域开始 -->
+        <ui-view>
+            <div class="viewer ng-scope">
+                <a class="buttonClose" href='javascript:closeCode();'></a>
+
+                <div class="viewerWrapper">
+                    <div class="iconLabel ng-binding"> 源码</div>
+                    <div class="codeBlocks">
+                        <h4>HTML</h4>
+                        <xmp>
+<div class="mr-can">
+  <canvas id="cav" width="1000" height="750"></canvas>
+  <img src="images/phone.png" alt="" id="pic"></div>
+                        </xmp>
+                        <h4>CSS</h4>
+                        <xmp>
+.mr-can {
+	margin: 0 auto;
+	width: 1000px;
+	height: 750px;
+	border: 1px solid #f00;
+}
+#cav {
+	background: url(../images/bg2.jpg);
+}
+#pic {
+	display: none;
+}
+                        </xmp>
+                         <h4>JavaScript</h4>
+                        <xmp>
+window.onload=function showpic(){
+	var cav = document.getElementById('cav');
+	var ctx=cav.getContext('2d');
+	var pic=document.getElementById('pic');
+	ctx.beginPath();//绘制手机图片，原图
+	//图片的起始坐标为（500,400）宽为88高为150
+	ctx.drawImage(pic,500,400,88,150);
+	ctx.beginPath();
+    	//将手机旋转2*Math.PI弧度
+	ctx.rotate(2*Math.PI/5);
+    	//将坐标原点平移至（600,-400）
+	ctx.translate(600,-400);
+    	ctx.drawImage(pic,100,90,88,150);
+ 	ctx.beginPath();
+    	//在上一张图的基础上继续旋转
+ 	ctx.rotate(2*Math.PI/5);
+    	//在上一张图的基础上横向塑钢0.85倍，纵向缩放0.75倍
+ 	ctx.scale(0.85,0.75);
+ 	ctx.drawImage(pic,100,90,88,150);
+	ctx.beginPath();
+ 	ctx.rotate(2*Math.PI/5);
+ 	ctx.scale(0.85,0.75);//原理同上
+ 	ctx.drawImage(pic,100,90,88,150);
+ 	ctx.beginPath();
+ 	ctx.rotate(2*Math.PI/5);
+ 	ctx.scale(0.85,0.75);
+ 	ctx.drawImage(pic,100,90,88,150);
+ 	ctx.beginPath();
+ 	ctx.rotate(2*Math.PI/5);
+ 	ctx.scale(0.85,0.75);
+ 	ctx.drawImage(pic,100,90,88,150);
+}		</xmp>
+                    </div>
+                </div>
+            </div>
+        </ui-view>
+        <!-- 源码区域结束-->
+		
+    </div>
+
+</ui-view>
+
+</body>
+</html>

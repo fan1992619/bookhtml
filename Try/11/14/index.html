@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>014</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/mr-basic.css"/>
+    <link href="css/mr-login.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div class="res-banner">
+    <div class="res-main">
+        <div class="login-box" style="right:30%">
+            <div class="mr-tabs" id="doc-my-tabs">
+                <ul class="mr-tabs-nav mr-nav mr-nav-tabs mr-nav-justify">
+                    <li class="mr-active"><a href="">登录</a></li>
+                </ul>
+
+                <div class="mr-tabs-bd">
+                    <div class="mr-tab-panel mr-active">
+                        <form method="post" id="form1">
+
+                            <div class="user-email">
+                                <label for="email"><i class="mr-icon-envelope-o"></i><span style="color:red;margin-left:5px">*</span></label>
+                                <input type="email" name="" id="email" placeholder="请输入邮箱账号">
+                            </div>
+                            <div class="user-pass">
+                                <label for="password"><i class="mr-icon-lock"></i><span style="color:red;margin-left:5px">*</span></label>
+                                <input type="password" name="" id="password" placeholder="请输入密码">
+                            </div>
+
+                        </form>
+
+                        <div class="login-links">
+
+                            <a href="javascript:void();" onclick="document.getElementById('form1').reset()" class="mr-fr">重置</a>
+                            <br/>
+                        </div>
+                        <div class="mr-cf">
+                            <input type="submit" onclick="mr_verify()" value="登录" class="mr-btn mr-btn-primary mr-btn-sm mr-fl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    function mr_verify(){
+        //获取表单对象
+        var email=document.getElementById("email");
+        var password=document.getElementById("password");
+
+        //验证项目是否为空
+        if(email.value==='' || email.value===null){
+            alert("邮箱不能为空！");
+            email.focus();
+            email.style.backgroundColor='bisque';
+            return;
+        }
+        if(password.value==='' || password.value===null){
+            alert("密码不能为空！");
+            password.focus();
+            password.style.backgroundColor='bisque';
+            return;
+        }
+
+        //验证邮件格式
+        apos = email.value.indexOf("@")
+        dotpos = email.value.lastIndexOf(".")
+        if (apos < 1 || dotpos - apos < 2) {
+            alert("邮箱格式错误！");
+            email.focus();
+            email.style.backgroundColor='bisque';
+            return;
+        }
+        else {
+            alert("邮箱格式正确！");
+        }
+
+        email.style.backgroundColor='';
+        password.style.backgroundColor='';
+
+        alert('表单提交成功！');
+
+    }
+</script>
+</body>
+
+</html>

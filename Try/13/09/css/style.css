@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+h3 {
+	margin-left: 250px
+}
+#show {
+	border: 1px solid #ccc;
+	width: 700px;
+	height: 500px;
+	margin: 0 auto;
+	overflow: scroll;
+}
+.mr-cont{
+	height: 600px; 
+	width: 800px;
+	border: 1px solid #f00;
+	margin: 0 auto;
+	
+}
+img{
+	height:500px;
+	width: 700px;
+}

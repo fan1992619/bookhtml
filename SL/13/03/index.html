@@ -1,0 +1,58 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>图片预览</title>
+<link href="css/style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+<div class="mr-cont">
+  <h2>个人简历</h2>
+  <div>
+    <div class="mess">
+      <div>
+        <p> <span>姓名:</span>
+          <input type="text">
+        </p>
+        <p><span>性别:</span>
+          <input type="text">
+        </p>
+      </div>
+      <div>
+        <p><span>生日:</span>
+          <input type="text">
+        </p>
+        <p><span>年龄:</span>
+          <input type="text">
+        </p>
+      </div>
+      <div>
+        <p><span>专业:</span>
+          <input type="text">
+        </p>
+        <p><span>学历:</span>
+          <input type="text">
+        </p>
+      </div>
+    </div>
+    <div class="photo" id="result"></div>
+  </div>
+  <div class="expr">
+    <h3>校内经历和所获荣誉</h3>
+    <div class="border"><textarea cols="84" rows="11"></textarea></div>
+  </div>
+  <div class="expr">
+    <h3>社会经历</h3>
+    <div><textarea cols="84" rows="11"></textarea></div>
+  </div>
+  <div class="btn">
+  <input type="button"  value="选择头像">
+  	<input type="file" id="file">
+  	<input type="button" value="预览" onClick="readFile ()">
+  </div>
+  
+</div>
+</body>
+<script type="text/javascript" src="js/js.js"></script>
+</html>

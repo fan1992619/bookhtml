@@ -1,0 +1,106 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>上机指导</title>
+</head>
+<link href="css/mr-style.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/mr-js.js"></script>
+<body>
+<div id="mr-cont">
+  <div class="mr-shopcar">
+    <div class="mr-sel">购物车</div>
+    <div class="mr-mess">商品信息</div>
+    <div class="mr-price">单价</div>
+    <div class="mr-num">数量</div>
+    <div class="mr-mon">金额</div>
+    <div class="mr-deal">操作</div>
+  </div>
+  <p class="mr-sale"> 店铺：51购 1号旗舰店 </p>
+  <div class="mr-shopcar goods1">
+    <div class="mr-sel">
+      <input type="checkbox">
+      <img src="images/x1.jpg" alt="" onMouseOver="showPic(0)" onMouseOut="hidPic(0)" class="mr-xpic">
+      <img src="images/d0.jpg" alt="" id="mr-pic0">
+    </div>
+    <div class="mr-mess">
+      <div class="mr-messtxt1">现货送钢化膜Huawei/G9青春版移动联通全网通4G手机</div>
+      <div class="mr-messtxt2" onMouseOver="bordr(0)" onMouseOut="clearBordr(0)">
+        <p>网络类型：4G</p>
+        <p>机身颜色：金色</p>
+        <p>套餐类型：官方标配</p>
+        <p>存储容量16GB</p>
+      </div>
+    </div>
+    <div class="mr-price">￥<span id="price1">1199.00</span></div>
+    <div class="mr-num">
+      <input type="number" max="5" min="0"value="0" onChange="comp(0)" id="num0">
+      <p>限购5件</p>
+    </div>
+    <div class="mr-mon"><span>￥<span id="all0">0.00</span></span></div>
+    <div class="mr-deal"><span>移入收藏夹</span><br><span>删除</span></div>
+  </div>
+  <p class="mr-sale"> 店铺：51购 1号旗舰店 </p>
+  <div class="mr-shopcar goods1">
+    <div class="mr-sel">
+      <input type="checkbox">
+      <img src="images/x2.jpg" alt="" onMouseOver="showPic(1)" onMouseOut="hidPic(1)"class="mr-xpic">
+      <img src="images/d1.jpg" alt="" id="mr-pic1">
+    </div>
+    <div class="mr-mess">
+      <div class="mr-messtxt1">现货送钢化膜Huawei/G9青春版移动联通全网通4G手机</div>
+      <div class="mr-messtxt2" onMouseOver="bordr(1)" onMouseOut="clearBordr(1)">
+        <p>网络类型：4G</p>
+        <p>机身颜色：金色</p>
+        <p>套餐类型：官方标配</p>
+        <p>存储容量16GB</p>
+      </div>
+    </div>
+    <div class="mr-price">￥<span id="price2">1580.00</span></div>
+    <div class="mr-num">
+      <input type="number" max="5" min="0" value="0"onChange="comp(1)" id="num1">
+      <p>限购5件</p>
+    </div>
+    <div class="mr-mon"><span>￥<span id="all1">0.00</span></span></div>
+    <div class="mr-deal"><span>移入收藏夹</span><br><span>删除</span></div>
+  </div>
+  <p class="mr-sale"> 店铺：51购 1号旗舰店 </p>
+  <div class="mr-shopcar goods1">
+    <div class="mr-sel">
+      <input type="checkbox">
+      <img src="images/x3.jpg" alt="" onMouseOver="showPic(2)" onMouseOut="hidPic(2)">
+      <img src="images/d2.jpg" alt="" id="mr-pic2">
+      
+    </div>
+    <div class="mr-mess">
+      <div class="mr-messtxt1">现货送钢化膜Huawei/G9青春版移动联通全网通4G手机</div>
+      <div class="mr-messtxt2" onMouseOver="bordr(2)" onMouseOut="clearBordr(2)">
+        <p>网络类型：4G</p>
+        <p>机身颜色：金色</p>
+        <p>套餐类型：官方标配</p>
+        <p>存储容量16GB</p>
+      </div>
+    </div>
+    <div class="mr-price">￥<span id="price3">3578.00</span></div>
+    <div class="mr-num">
+      <input type="number" max="5" min="0" value="0" onChange="comp(2)"id="num2">
+      <p>限购5件</p>
+    </div>
+    <div class="mr-mon"><span>￥<span id="all2">0.00</span></span></div>
+    <div class="mr-deal"><span>移入收藏夹</span><br><span>删除</span></div>
+  </div>
+  <p class="mr-sale"></p>
+  
+  <div class="goods2">
+    <div class="mr-sel1">
+      <label><input type="radio"name="a"onClick="sel()">全选</label>&nbsp;&nbsp;&nbsp;&nbsp;
+      <label><input type="radio" name="a"onClick="sel()">全不选</label>
+    </div>
+    <div class="mess">清除失效宝贝&nbsp;&nbsp;分享</div>
+    <div class="price1">&nbsp;&nbsp;已选商品 <span id="allnum">0</span>&nbsp;件</div>
+    <div class="mr-mon1"><span>￥<span id="allprice">0.00</span></span></div>
+    <div class="mr-deal1"><input type="button" value="结算" onClick="amoney()"></div>
+  </div>
+</div>
+</body>
+</html>

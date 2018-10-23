@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>跨域通信示例</title>
+    <script type="text/javascript">
+    //监听message事件
+	//错误提示：方法名出现错误，应为addEventListener 
+        window.addeventListener("message",function(ev){
+            //忽略指定URL地址之外的页面传过来的消息
+            if(ev.origin!="http://192.168.1.189"){
+                return;
+            }
+            //显示消息
+            alert("从"+ev.origin+"那里传过来的消息:\n\""+ev.data+"\"")
+        },false);
+
+        function hello(){
+            var iframe=window.frames[0];
+            //传递消息
+            iframe.postMessage("您好！","http://192.168.189");
+        }
+    </script>
+</head>
+<body>
+<h1>跨域通信示例</h1>
+<!--错误提示：应添加 onload="hello()"-->
+<iframe width="400" src="2.html" ></iframe>
+</body>
+</html>

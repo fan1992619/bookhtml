@@ -1,0 +1,25 @@
+// JavaScript Document
+var cav=document.getElementById("cav").getContext("2d");
+cav.beginPath();
+cav.fillStyle="rgba(245,217,133,0.3)";
+cav.moveTo(400,300);
+cav.arc(400,300,150,-4*Math.PI/5,-1*Math.PI/5,false);
+cav.closePath();
+cav.fill();
+cav.beginPath();
+cav.fillStyle="rgba(245,217,133,0.7)";
+cav.moveTo(400,300);
+cav.arc(400,300,145,-4*Math.PI/5,-1*Math.PI/5,false);
+cav.closePath();
+cav.fill();
+cav.beginPath();
+cav.fillStyle="#f00";
+cav.font="30px 华文新魏";
+cav.fillText("纵",385,210);
+cav.fill();
+cav.fillText("横",385,250);
+cav.fill();
+cav.beginPath();
+cav.fillStyle="rgba(245,217,133,1)";
+cav.arc(400,295,5,0,2*Math.PI,false);
+cav.fill();

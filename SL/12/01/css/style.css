@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+.mr-cont{
+	height: 700px;
+	width: 504px;
+	margin: 0 auto;
+}
+#cav{
+	border: 1px solid #f00;
+	background: url(../img/bg.png);
+}
+

@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+.mr-cont{
+	width: 500px;
+	height: 323px;
+	margin: 0 auto;
+	text-align: center;
+	background: url(../img/bg.png);
+}
+h2{
+	padding-top: 30px;
+}
+label{
+	display: block;
+	margin: 20px;
+}

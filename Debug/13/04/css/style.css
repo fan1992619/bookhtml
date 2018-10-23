@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+#dragcont{
+	height: 70px;
+	width: 70px;
+	border: 2px solid #00f;
+	position: absolute;
+}
+#box{
+	height: 500px;
+	width: 500px;
+	border: 1px solid #ff6600;
+	margin: 0 auto;
+}

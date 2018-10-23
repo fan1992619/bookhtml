@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>获取媒体元素的基本信息</title>
+</head>
+
+<body>
+	<video id="media" controls width="300" height="240" preload="metadata" autoplay>
+<!--	使用source元素来指定多个格式，src指定视频的路径，将href改为src-->
+		<source href="video.mp4"/>
+		<source href="video.ogv"/>
+		<source href="1.webm"/>
+		Video cannot be displayed
+	</video>
+	<table id="info" border="1">
+		<tr><th>property</th><th>value</th></tr>
+	</table>
+	<script>
+	
+		var mediaEle=document.getElementById("media");
+		var tableEle=document.getElementById("info");
+		var propertyName=['autoplay','currentSrc','controls','loop','muted','preload','src','volume'];
+		for(var i=0;i<propertyName.length;i++){
+			tableEle.innerHTML+="<tr><td>"+propertyName[i]+"</td><td>"+mediaEle[propertyName[i]]+"</td></tr>";
+		}
+	</script>
+</body>
+</html>

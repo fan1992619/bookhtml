@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--在html标签中添加manifest属性，引入cache.manifest文件-->
+<html manifest="cache.manifest">
+<head>
+    <meta charset="UTF-8">
+    <title>hello,Application Cache!</title>
+    <!--引入a.css文件-->
+    <link rel="stylesheet" type="text/css" href="a.css">
+    <!--引入a.js文件-->
+    <script type="text/JavaScript" src="a.js"></script>
+</head>
+<body class='boxStyle'>
+<div class='fontStyle'> Hello, Application Cache !</div>
+<!--需要缓存的文件-->
+<img src="test-1.jpg">
+<!--不需要缓存的文件-->
+<img src="test-2.jpg">
+
+<script>
+    applicationCache.onUpdateReady=function(){
+        // 本地缓存已被更新，通知用户。
+        alert("正在更新本地缓存");
+        applicationCache.swapCache();
+        alert("本地缓存已被更新，您可以刷新页面来得到本程序的最新版本。");
+    };
+</script>
+</body>
+</html>

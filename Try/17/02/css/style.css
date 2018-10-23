@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+.mr-cont {
+	padding-top: 30px;
+	height: 600px;
+	width: 800px;
+	margin: 0 auto;
+	background: url(../img/bg.jpg)
+}
+tr{
+	height: 40px;
+	text-align: center;
+}
+td{
+	width: 150px;
+}
+[type="text"],[type="tel"],[type="email"]{
+	height: 40px;
+	border: 0;
+}
+.btn{
+	width: 590px;
+	margin: 40px auto;
+}
+.btn input{
+	height: 30px;
+	margin-left: 50px;
+}
+.btn> :last-child{
+	margin-left: -9px;
+}
+[type="search"]{
+	width: 143px;
+}
+#show{
+	width: 976px;
+	display:none;
+}
+#show tr td{
+	border: 1px solid #000;
+	width: 120px;
+}

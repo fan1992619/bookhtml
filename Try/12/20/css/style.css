@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+.mr-cont{
+	height: 600px;
+	width: 800px;
+	margin: 0 auto;
+	position: relative;
+	border: 1px solid #f00;
+	background: url(../img/bg.jpg);
+}
+.mr-cont div{
+	position: absolute;
+	top:130px;
+	left: 150px;
+}
+

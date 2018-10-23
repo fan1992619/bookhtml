@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+.mr-cont{
+	width: 800px;
+	height: 600;
+	margin: 0 auto;
+	border: 1px solid #f00;
+}
+#cav{
+	background-color: rgba(26,239,143,0.3)
+}

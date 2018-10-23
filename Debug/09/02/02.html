@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>评估回放能力</title>
+</head>
+
+<body>
+	<video id="media" controls width="360" height="240" preload="metadata">
+	Video cannot be displayed
+<!--	<source src="video.mp4">-->
+	</video>
+	
+	<table id="info" border="1">
+		<tr><th>property</th><th>value</th></tr>
+	</table>
+	<script>
+		var mediaElem=document.getElementById("media");
+		var tableElem=document.getElementById("info");
+		var mediaFiles=["video.ogv","video.webm","video.mp4"];
+		var mediaTypes=["video/mp4","video/ogv","video/webm"];
+		for( var i=0;i<mediaFiles.length;i++){
+			var playable=mediaElem.canPlayType(mediaTypes[i]);
+			if(playable==""){
+				playable="no";
+			}
+			tableElem.innerHTML+="<tr><td>"+mediaTypes[i]+"</td><td>"+playable+"</td></tr>";
+			if(playable=="probably"){   //maybe 浏览器也许可以播放该类型  probably游览器有相当把握能播放该类型,""（控制符串） 在这里应该改为maybe
+			
+				mediaElem.src=mediaFiles[i];
+			}
+			
+		}
+	</script>
+</body>
+</html>

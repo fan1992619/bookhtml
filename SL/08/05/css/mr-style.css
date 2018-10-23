@@ -1,0 +1,13 @@
+@charset "utf-8";
+.mr-content{
+		width:695px;
+		height:300px;
+		margin:0 auto;
+		background:url(../images/bg.png) no-repeat;
+		border:1px solid red;
+		}
+/*文本域样式*/
+.mr-content textarea{
+		margin:103px 0 0 346px;
+		}
+

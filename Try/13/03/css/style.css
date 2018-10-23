@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+.mr-cont{
+	width: 800px;
+	height: 500px;
+	margin: 0 auto;
+	background: url(../img/bg.jpg);
+}
+h2{
+	padding: 60px  100px 0;
+}
+.mr-head{
+	height: 42px;
+	margin-left: 120px;
+}
+.mr-head input{
+	width: 70px;
+	margin-left: 150px;
+}
+#show{
+	height: 250px;
+	width: 600px;
+	margin: 0 auto;
+	border: 1px solid #ff6600;
+}
+span{
+	display: block;
+}
+#tab{
+	margin: 40px 20px;
+}
+tr{
+	height: 40px;
+}
+td{
+	width: 100px;
+	text-align: center;
+	border: 1px solid #000;
+}

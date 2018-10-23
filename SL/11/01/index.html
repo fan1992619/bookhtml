@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>第一个JavaScript小程序</title>
+    <script>
+        //创建方法，用于获取当前系统时间并显示到页面
+        function displayDate(){
+            document.getElementById("demo").innerHTML=Date(); //获取id为demo的p标签
+        }                                                       //获取系统时间并显示
+    </script>
+</head>
+<body style="width: 500px;margin:0 auto;border: 1px solid red;text-align: center">
+<h1>第一个 JavaScript 小程序</h1>
+<p id="demo">这里显示日期</p>
+<!--onclick属性表示鼠标单击按钮，触发displayDate()方法-->
+<button type="button" onclick="displayDate()">显示当前日期</button>
+</body>
+</html>

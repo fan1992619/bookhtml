@@ -1,0 +1,104 @@
+﻿@charset "utf-8";
+/* CSS Document */
+* {
+	padding: 0;
+	margin: 0
+}
+#mr-cont {
+	position: relative;
+	width: 1130px;
+	margin: 20px auto;
+	font-size: 18px;
+	border: 1px solid #f00;
+}
+.mr-shopcar {
+	height: 80px;
+	margin: 0 auto;
+}
+.goods1 {
+	height: 110px;
+	background: rgba(204,204,204,0.3)
+}
+.goods2 {
+	height: 50px;
+	background: rgba(204,204,204,0.8);
+	font-size: 18px;
+	line-height: 50px
+}
+.mr-sel, .mr-mess, .mr-price, .mr-num, .mr-mon, .mr-deal {
+	float: left;
+	margin-top: 40px;
+}
+.mr-sel, .mr-price, .mr-num, .mr-mon, .mr-deal {
+	width: 135px;
+}
+.mr-mess {
+	width: 390px;
+	font-size: 12px
+}
+.mr-messtxt1, .mr-messtxt2 {
+	width: 149px;
+	line-height: 20px;
+	float: left;
+}
+.mr-messtxt2 {
+	margin: -65px 200px;
+	color: #652b5a;
+	border: 1px dashed #f0f0f0
+}
+.mr-messtxt2 p {
+	padding-left: 20px;
+}
+.mr-num p, #price1, #price2, #price3 {
+	font-size: 12px;
+	color: #F00
+}
+.mr-sale {
+	margin: 10px;
+	text-align: left;
+}
+.mr-colu {
+	height: 150px;
+}
+.price1 {
+	float: left;
+	width: 250px;
+}
+.mr-sel1 {
+	float: left;
+	width: 335px;
+}
+.mess {
+	float: left;
+	width: 220px;
+}
+.mr-mon1 {
+	float: left;
+	margin-right: 80px;
+}
+#allnum {
+	font-size: 20px;
+	color: #f00
+}
+.mr-xpic {
+	z-index: 0
+}
+#mr-pic0, #mr-pic1, #mr-pic2 {
+	position: absolute;
+	left: 90px;
+	display: none;
+	height: 220px;
+	width: 220px;
+}
+#mr-pic0 {
+	top: 80px
+}
+#mr-pic1 {
+	top: 220px
+}
+#mr-pic2 {
+	top: 370px
+}
+#allprice {
+	color: #f00
+}

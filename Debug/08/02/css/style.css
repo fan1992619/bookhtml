@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+/*添加页面的背景图片*/
+body{
+	background: url(../img/bgs.jpg);
+}
+/*设置主体内容位置和背景颜色*/
+.mr-cont{
+	padding-top: 30px;
+	width: 800px;
+	height: 1000px;
+	margin: 0 auto;
+	background-color: rgba(0,0,0,0.1)
+}
+/*设置外边距*/
+.mr-cont label{
+	margin-left: 40px;
+}
+.mr-cont p{
+	margin-left: 60px;
+}

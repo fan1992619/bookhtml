@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>文件预览</title>
+<link href="css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="mr-cont">
+  <h3>查看文件</h3>
+  <div class="readd">
+    <span>下方白色区域显示文件内容：</span>
+    <div id="result">
+    <textarea id="text"></textarea> </div>
+  </div>
+  <div class="btn">
+    <input type="button" value="选择文件">
+    <input type="file" id="file">
+    <input type="button" value="查看文件" onClick="readAsText()">
+  </div>
+</div>
+</body>
+<script type="text/javascript" src="js/js.js"></script>
+</html>

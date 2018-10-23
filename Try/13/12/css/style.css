@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	text-align: center
+}
+#pic{
+	height: 150px;
+	position: absolute;
+}
+.btn{
+	padding-top: 150px;
+}

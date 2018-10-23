@@ -1,0 +1,12 @@
+CACHE MANIFEST
+# Version 1.0.0.0
+
+CACHE:
+a.html
+a.js
+a.css
+test-1.jpg
+
+#选项配置出现错误，应改为 NETWORK
+NETTWORK:
+test-2.jpg

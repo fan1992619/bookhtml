@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JavaScript数据类型</title>
+	<!--引入页面样式文件 -->
+    <link rel="stylesheet" type="text/css" href="css/mr-style.css">
+</head>
+<body>
+<div >
+    <section>
+        <h2><span>常见数据类型</span></h2>
+
+        <div class="mr-box">
+            <span class="mr-item">Number 类型</span>
+            <span class="mr-info-first">
+                <xmp>
+var a = 10;         // 十进制(整数)
+var b = 1.1;        // 浮点数
+var c = 0x12ac;     // 十六进制
+var d = 5.0;        // 解析成整数5
+console.log(c);     // 打印值：4780
+console.log(d);     // 打印值：5
+                </xmp>
+            </span>
+
+        </div>
+
+        <div class="mr-box">
+            <span class="mr-item">String 类型</span>
+             <span class="mr-info">
+            <xmp>
+                var string1 = "51购商城";  // 双引号
+                var string2 = "51购商城";  // 单引号
+                var string3 = "51\'购\'";  // 转义
+                console.log(string3);      // 51'购'
+            </xmp>
+            </span>
+        </div>
+
+        <div class="mr-box">
+            <span class="mr-item">Boolean 类型</span>
+            <span class="mr-info">
+            <xmp>
+                var a = "Hello world!";
+                if (a){
+                console.log("该语句已执行打印！");
+                }
+            </xmp>
+            </span>
+        </div>
+
+        <div class="mr-box">
+            <span class="mr-item">特殊 数据类型</span>
+             <span class="mr-info">
+            <xmp>
+                var a;            // 声明后未初始化
+                console.log(a);   // undefined
+
+                var b=null;       //null 数据类型
+                console.log(b);   // null
+
+            </xmp>
+            </span>
+        </div>
+
+    </section>
+</div>
+
+</body>
+</html>

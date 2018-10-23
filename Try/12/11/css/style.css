@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+.mr-cont{
+	height: 600px;
+	width: 800px;
+	margin: 0 auto;
+	position: relative;
+	background: url(../img/back3.jpg);
+	border: 1px solid #f00;
+}
+[type="button"]{
+	height: 30px;
+	width: 50px;
+	margin-left: 300px;
+	border-radius: 15px;
+	border: none;
+	position: absolute;
+	top:550px;
+	background: rgb(128,188,240);
+}
+.left{
+	left: 150px;
+}

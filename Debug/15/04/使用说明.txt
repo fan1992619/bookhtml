@@ -1,0 +1,22 @@
+HTML5之Worker用法：
+
+HTML5提供了Worker类用于多线程处理。Worker是在UI主线程中创建，后台执行的一段js脚本，它通过消息与UI线程传递数据。使用Worker就3步：
+第1步：创建一个Worker，需要指定一个js文件，作为Worker线程的执行体：
+var worker = new Worker("worker.js");
+第2步：给Worker实例指定消息处理函数，只有2个：onmessage ，onerror 
+worker.onmessage = function (event) {
+// update UI here
+var t1 = new Date().getTime();
+elemById("_time").value = t1 - t0;
+elemById("_piValue").value = event.data;
+};
+
+worker.onerror = function (event) { 
+alert(event.message); 
+};
+第3步：给worker发消息：postMessage。
+elemById("_time").value = "-";
+t0 = new Date().getTime();
+worker.postMessage(parseInt(elemById("_num_rects").value));
+
+下面以一个具体的例子来说明Worker的用法。这个例子是用数值积分的方法求pi=(3.1415926....）的。worker.js就是做这个工作。

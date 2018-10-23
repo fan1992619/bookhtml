@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+.mr-cont{
+	width: 800px;
+	height: 600px;
+	text-align: center;
+	margin: 0 auto;
+	background: url(../img/bg.png);
+}
+h2{
+	padding-top: 60px;
+}
+.mr-head{
+	height: 462px;
+	width: 554px;
+	margin-left: 130px;
+	background: url(../img/4-9.png);
+}
+[type="file"]{
+	display: block;
+	padding: 100px 0 0 175px;
+}
+[type="button"]{
+	margin: 260px 0 0 100px;
+	height: 25px;
+	width: 50px;
+}
+span{
+	display: block;
+	font-size: 12px;
+	color: #f00;
+	margin-top: 10px;
+}

@@ -1,0 +1,25 @@
+// JavaScript Document
+var cav=document.getElementById("cav").getContext("2d");
+cav.lineWidth=5;
+cav.strokeStyle="rgb(244,103,30)";
+cav.moveTo(400,100);
+cav.lineTo(300,170);
+cav.lineTo(500,170);
+cav.closePath();
+cav.stroke();
+cav.beginPath();
+cav.moveTo(340,170);
+cav.lineTo(340,300);
+cav.lineTo(460,300);
+cav.lineTo(460,170);
+cav.stroke();
+cav.rect(400,190,40,40);
+cav.stroke();
+cav.beginPath();
+cav.moveTo(400,210);
+cav.lineTo(440,210);
+cav.stroke();
+cav.beginPath();
+cav.moveTo(420,190);
+cav.lineTo(420,230);
+cav.stroke();

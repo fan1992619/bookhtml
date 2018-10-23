@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+.mr-cont{
+	width: 600px;
+	margin: 0 auto;
+	border: 1px solid #f00;
+}
+label{
+	display: block;
+	margin: 10px 170px;
+}
+.btn{
+	margin-left: 150px;
+}
+.btn input{
+	margin-left: 50px;
+}

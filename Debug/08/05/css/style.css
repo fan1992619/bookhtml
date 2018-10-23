@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+/*页面整体布局*/
+.mr-cont{
+	height: 600px;
+	width: 800px;
+	margin: 20px auto;
+	text-align: center;
+	background: url(../img/bg.png);
+}
+/*表单位置*/
+form{
+	padding-top: 250px;
+}
+/*表单中的label标签*/
+form label{
+	margin-top: 25px;
+	display: block;
+	font-size: 18px;
+}
+/*单行文本框和密码输入框的大小*/
+form label input{
+	height:30px;
+	width: 190px;
+}
+
+[type="image"]{
+	padding-top: 20px;   /*图片按钮的位置*/
+}

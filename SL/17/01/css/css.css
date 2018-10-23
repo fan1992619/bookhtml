@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+.mr-cont{
+	width: 800px;
+	margin: 0 auto;
+	border: 1px solid #f00;
+}
+.mr-cont>p{
+	margin-left: 200px;
+}

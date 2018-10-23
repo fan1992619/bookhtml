@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>子页面</title>
+    <script type="text/javascript">
+        window.addEventListener("message",function(ev){
+            //忽略指定URL地址之外的页面传过来的消息
+            if(ev.origin!="http://192.168.1.59"){
+                return;
+            }
+            document.body.innerHTML="从"+ev.origin+"那里传来的消息。<br>\""+ev.data+"\""
+            //向主页面发送消息
+            ev.source.postMessage("明日科技欢迎您！这里是"+this.location,ev.origin);
+        },false);
+    </script>
+</head>
+<body>
+<div>从http：192.168.1.59那里传来的消息。<br/>您好！</div>
+</body>
+</html>

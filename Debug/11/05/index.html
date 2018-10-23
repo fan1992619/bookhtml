@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>鼠标键盘事件</title>
+    <!--引入页面样式文件 -->
+    <link rel="stylesheet" type="text/css" href="css/mr-style.css">
+</head>
+<body onkeydown='keyEvent()' style="margin:0 auto;">
+<div class='a'>
+    <h1 style="text-align: center">鼠标键盘事件</h1>
+    <div id="mr-event" onmousedown="mouseEvent()">
+        <span style="text-align: left">试一试：</span><br/><br/>
+        1.单击键盘上的“Ctrl”键盘，背景颜色变成<span style="color:#151570">蓝色</span>。<br/><br/>
+        2.单击键盘上的“Alt”键盘，背景颜色变成<span style="color:darkred">红色</span>。<br/><br/>
+        3.单击键盘上的“Shift”键盘，背景颜色变成<span style="color:orangered">粉红色</span>。<br/><br/>
+        4.单击鼠标左键，弹出提示信息。<br/><br/>
+        5.单击鼠标左键，弹出提示信息。<br/><br/>
+    </div>
+</div>
+</body>
+<script language="javascript">
+    //鼠标事件
+    function mouseEvent(){
+        var b=event.button;        //获取鼠标对象
+        //错误：逻辑判断错误！应改成"=="
+		if(b!=2){                   //单击鼠标右键时
+            alert("你按了右键！"); //弹出提示信息
+        }
+        else if(b==0){              //单击鼠标左键时
+            alert("你按了左键！");  //弹出提示信息
+        }
+    }
+    //键盘事件
+    function keyEvent() {
+        var c = document.getElementById('mr-event');//获取页面对象
+        if (event.altKey) {                         //单击键盘<Alt>键时
+            c.style.backgroundColor = 'red'        //背景颜色变化
+        }
+        else if (event.ctrlKey) {                   //单击键盘<Ctrl>键时
+            c.style.backgroundColor = 'blue'       //背景颜色变化
+        }
+        else if (event.shiftKey) {                  //单击键盘<Shift>键时
+            c.style.backgroundColor = 'pink'       //背景颜色变化
+        }
+    }
+</script>
+</html>

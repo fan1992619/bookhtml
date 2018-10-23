@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>area标签</title>
+</head>
+<body>
+<p>点击太阳或其他行星，注意变化：</p>
+<img src="images/planets.gif" width="180" height="200" alt="Planets" usemap="#planetmap">
+<map name="planetmap">
+ <!--  href规定区域的目标URL-->
+ <!--  shape规定区域的形状-->
+  <!--  coords规定区域的坐标-->
+  <area shape="rect" coords="0,10,100,400" alt="Sun" href="images/sun.gif">
+  <area shape="circle" coords="150,90,20" alt="Venus" href="images/venglobe.gif">
+  <area shape="circle" coords="110,93,8" alt="Mercury" href="#">
+  
+</map>
+</body>
+</html>

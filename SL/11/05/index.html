@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Window对象常见对话框</title>
+	<!--引入页面样式文件 -->
+    <link rel="stylesheet" type="text/css" href="css/mr-style.css">
+</head>
+<body>
+<div >
+    <section>
+        <h2><span>Window对象常用对话框</span></h2>
+        <div class="mr-box">
+            <span class="mr-item">警告（alert）</span>
+            <span class="mr-info-first">
+                <button type="button" onclick="mr_alert()">试一下!</button>
+            </span>
+        </div>
+
+        <div class="mr-box">
+            <span class="mr-item">确定 （comfirm）</span>
+             <span class="mr-info">
+                <button type="button" onclick="mr_confirm()">试一下!</button>
+            </span>
+        </div>
+
+        <div class="mr-box">
+            <span class="mr-item">提示（prompts）</span>
+            <span class="mr-info">
+                <button type="button" onclick="mr_prompts()">试一下!</button>
+            </span>
+        </div>
+
+        <div class="mr-box">
+            <span class="mr-item">综合 对话框</span>
+             <span class="mr-info">
+                    <button type="button" onclick="mr_dialog()">试一下!</button>
+            </span>
+        </div>
+    </section>
+</div>
+
+<script>
+    //警告
+    function mr_alert(){
+        window.alert("警告：支付成功！");
+    }
+
+    //是否确定
+    function mr_confirm(){
+        window.confirm("询问：确定要购买吗？");
+    }
+
+    //提示留言
+    function mr_prompts(){
+        window.prompt("请输入你的邮寄地址","");
+    }
+
+    //综合对话框
+    function mr_dialog(){
+        window.confirm("询问：确定要购买吗？");
+        window.prompt("请输入你的邮寄地址","")
+        window.alert("支付成功！")
+    }
+</script>
+
+</body>
+</html>

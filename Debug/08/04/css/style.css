@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+/*页面整体大小、位置以及背景颜色*/
+.mr-cont {
+	height: 1020px;
+	width: 800px;
+	margin: 20px auto;
+	background: url(../img/bg.png);
+}
+/*mr-cont的子元素中的div元素*/
+.mr-cont>div {
+	width: 740px;
+	padding: 20px 30px;
+	margin-top: 20px;
+	border: 1px solid rgba(181,179,179,1.00)
+}
+/*h3标题的样式*/
+h3 {
+	padding-top: 5px;
+}
+/*第一模块中的label标签的样式*/
+.mr-cont>:first-child>label {
+	display: block;
+	margin: 10px auto;
+}

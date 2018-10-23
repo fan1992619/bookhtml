@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+/*页面整体内容*/
+.mr-cont{
+	height: 328px;       /*页面大小*/
+	width: 432px;
+	text-align: center;       /*页面内容居中*/
+	margin: 0 auto;
+	background: url(../img/登陆界面.jpg);       /*页面背景图片*/
+}
+h2{
+	padding-top: 60px;       /*通过调整页面标题的内边距改变其位置*/
+}
+form{
+	margin-top: 50px;       /*通过调整表单的外边距改变表单位置*/
+}
+ /*先设置用户名和密码为块级元素，然后改变外边距，从而改变位置*/
+label{
+	display: block;      
+	margin-top: 30px;
+}
+/*重置和提交按钮的宽高和位置*/
+[type="reset"],[type="submit"]{
+	width: 70px;
+	height: 25px;
+	margin: 30px 0 0 20px;
+}

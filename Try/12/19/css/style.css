@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+.mr-cont {
+	height: 600px;
+	width: 800px;
+	margin: 0 auto;
+	border: 1px solid #f00;
+	position: relative;
+	background: url(../img/bg.jpg);
+}
+.sel {
+	float: left;
+	position: absolute;
+	top: 400px;
+	font-size: 20px;
+}
+select {
+	font-size: 18px;
+}
+.sel1 {
+	left: 200px;
+}
+.sel2 {
+	left: 400px;
+}
